@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'BehanceFont';
+  src: url('/behance-6abe9780cce35.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-ink: #151515;
+  --color-paper: #f7f7f4;
+  --color-signal: #ff4a1c;
+  --color-stone: #6b665a;
+
+  --font-display: "Playfair Display", "Alexandria", Georgia, serif;
+  --font-heading: "Alexandria", "Lemonada", sans-serif;
+  --font-body: "Lemonada", "Alexandria", sans-serif;
+  --font-mono: "PT Mono", "Lemonada", ui-monospace, monospace;
+  --font-accent: "Marhey", "Lemonada", cursive;
+  --font-custom: "BehanceFont", sans-serif;
+}
+
+.main-name {
+  font-family: 'BehanceFont', sans-serif !important;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-signal);
+  color: var(--color-paper);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(107, 102, 90, 0.55) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(107, 102, 90, 0.55);
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-signal);
+  outline-offset: 2px;
+}
